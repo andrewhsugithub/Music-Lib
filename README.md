@@ -14,3 +14,13 @@ A music library for you to listen and store your favorite music. Create your own
 You can go API credentials in Google https://console.developers.google.com/apis/credentials ,click on the "Browser Key", and then you can restrict your API key.
 
 Read [here](https://jsmobiledev.com/article/hide-firebase-api/) for more details.
+
+### Features
+
+1. Upload your Album
+   ![upload](https://github.com/andrewhsugithub/Music-Lib/blob/master/src/assets/img/upload.png)
+   You have to have at least your album image, album audio, and album name to be able to upload. All data will be stored in Firebase database and Firebase storage.
+
+2. Edit/Delete your Album
+   ![edit](https://github.com/andrewhsugithub/Music-Lib/blob/master/src/assets/img/edit.png)
+   You can edit details such as album image, audio, description, etc... and save it, and again image, audio, name shouldn't be left blank, or you can also delete the whole album.
