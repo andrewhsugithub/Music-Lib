@@ -88,7 +88,6 @@ const UploadModal = ({ authUser, toggleTab }) => {
                 alt="Thumb"
               />
               <div className="thumbnail__txt">
-                {/* <h1 className="">{imgUpload.name}</h1> */}
                 <button
                   className="change__image-btn"
                   onClick={() => {
