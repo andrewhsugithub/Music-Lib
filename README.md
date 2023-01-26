@@ -1,7 +1,7 @@
 # Music Lib
 
 ![demo](https://github.com/andrewhsugithub/Music-Lib/blob/master/src/assets/img/demo.png)
-A music library for you to listen and store your favorite music. Create your own playlist in a personal space authenticated with Firebase. Explore all the features [here]() and have fun!
+A music library for you to listen and store your favorite music. Create your own playlist in a personal space authenticated with Firebase. Explore all the features [here](https://andrewhsugithub.github.io/Music-Lib) and have fun!
 
 ## How to create your own Music Lib with your own Firebase account?
 
