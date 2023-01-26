@@ -1,0 +1,452 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap");
+
+.album__container {
+  margin: 5rem auto;
+  max-width: 1200px;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 3rem;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/**********************card*************************/
+.album__card {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  cursor: pointer;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.album__card:hover {
+  transform: scale(1.15);
+}
+
+.album__img {
+  width: 295px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.album__title {
+  font-size: 2rem;
+  width: 100%;
+  color: black;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.create {
+  border: 0.35rem dotted rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add__button {
+  font-family: "Raleway Dots", cursive;
+  font-size: 18rem;
+  border: none;
+  text-align: center;
+}
+
+.add__text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/**********************modal*************************/
+.button__container {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.edit__button {
+  background: linear-gradient(
+    to right,
+    hsla(211, 31%, 48%, 0.886),
+    hsla(133, 48%, 50%, 0.887)
+  );
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 9rem;
+}
+
+.delete__button {
+  background-color: hsla(0, 92%, 51%, 0.705);
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 9rem;
+  font-weight: 900;
+}
+
+.audio__container {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.image__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.change__image-btn {
+  background: linear-gradient(
+    to right,
+    hsla(280, 79%, 55%, 0.852),
+    hsla(252, 83%, 55%, 0.99)
+  );
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 9rem;
+}
+
+.create__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.modal__container {
+  width: 1000px;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    hsla(318, 60%, 46%, 0.852),
+    hsla(57, 75%, 45%, 0.775)
+  );
+  padding: 4.5rem 2.5rem 2.5rem;
+  border-radius: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  column-gap: 2rem;
+  place-items: center;
+}
+
+.album__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+  width: 400px;
+}
+
+.album__text {
+  font-weight: 500;
+  color: white;
+}
+
+.album__name {
+  padding: 1px 2px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.album__description {
+  height: 300px;
+  padding: 1px 2px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.thumbnail {
+  padding: 2rem;
+  border: 5px dotted rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  margin: 0 10px;
+}
+
+#labelForThumbnail,
+.audioLabel,
+.changeThumbnail {
+  display: none;
+}
+
+.thumbnail__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  text-align: center;
+}
+
+.upload__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.audio {
+  background: linear-gradient(
+    to right,
+    hsla(280, 79%, 55%, 0.852),
+    hsla(252, 83%, 55%, 0.99)
+  );
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.uil-upload {
+  padding-left: 0.5rem;
+}
+
+.upload-audio-text {
+  padding-right: 0.5rem;
+}
+
+#audioLabel {
+  display: none;
+}
+
+#changeAudioLabel {
+  display: none;
+}
+
+.upload__button {
+  background: linear-gradient(
+    to right,
+    hsla(280, 79%, 55%, 0.852),
+    hsla(252, 83%, 55%, 0.99)
+  );
+  color: white;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 9rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 20%);
+  cursor: pointer;
+}
+
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (max-width: 1050px) {
+  .album__container {
+    max-width: 800px;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  .button__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .modal__container {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .album__description {
+    height: 80%;
+  }
+
+  .audio__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.5rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .audio__container {
+    width: 100%;
+  }
+
+  .album__form {
+    width: 250px;
+  }
+
+  .album__description {
+    height: 100%;
+  }
+
+  .audio {
+    width: 200px;
+  }
+
+  .button__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+  }
+}
+
+.song__cards {
+  width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+  .modal__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    row-gap: 1rem;
+  }
+
+  .modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .album__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .button__container {
+    row-gap: 1.25rem;
+  }
+
+  .image__container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.75rem;
+  }
+
+  .thumbnail__img {
+    width: 80px;
+  }
+
+  .album__card {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 100%;
+  }
+
+  .album__form {
+    row-gap: 1rem;
+  }
+
+  .album__img {
+    width: 100px;
+    margin: 0;
+  }
+
+  .album__title {
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+  }
+
+  .create {
+    height: 100px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    width: 100%;
+  }
+
+  .thumbnail {
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .add__button {
+    font-size: 7rem;
+  }
+
+  .add__text {
+    font-weight: 300;
+  }
+
+  .album__audio {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 385px) {
+  .modal__container {
+    padding: 1.8rem 1rem 1rem;
+  }
+
+  .modal-close {
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+
+  .thumbnail {
+    padding: 0.75rem;
+  }
+
+  .image__container {
+    column-gap: 0.5rem;
+  }
+
+  .album__img {
+    width: 80px;
+    margin: 0;
+  }
+
+  .album__title {
+    overflow-wrap: break-word;
+    font-size: 1.25rem;
+  }
+}
